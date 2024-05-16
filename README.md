@@ -49,7 +49,7 @@ L'application est développée avec React Native et utilise une API Python pour 
 
 2. Naviguer dans le répertoire :
   ```bash
-     cd MOTSign
+    cd MOTSign
 
 ## Configuration de l'Environnement Python avec Visual Studio Code
 ### Prérequis
