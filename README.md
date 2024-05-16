@@ -49,7 +49,7 @@ L'application est développée avec React Native et utilise une API Python pour 
 
 2. Naviguer dans le répertoire :
   ```bash
-  cd MOTSign
+     cd MOTSign
 
 ## Configuration de l'Environnement Python avec Visual Studio Code
 ### Prérequis
@@ -63,7 +63,7 @@ Assurez-vous d'avoir installé Anaconda ou Miniconda, qui sont des distributions
       cd api/environnement
 4. Créez l'environnement Python à partir du fichier `motsignenvi.yaml` :
     ```bash
-    conda env create -f motsignenvi.yaml
+      conda env create -f motsignenvi.yaml
     
 
 ## Configuration de Visual Studio Code pour Utiliser l'Environnement
@@ -74,9 +74,10 @@ Assurez-vous d'avoir installé Anaconda ou Miniconda, qui sont des distributions
 
 ## Compilation et Déploiement
 ### Compiler le Projet
-    ```bash
-    npx expo start
-
+      
+  npx expo start
+      
+                   
 ## Déployer sur un Appareil Réel
 
 1. Télécharger puis installer l'application EXPO-GO sur iOS ou Android.
