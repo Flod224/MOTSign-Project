@@ -44,8 +44,8 @@ L'application est développée avec React Native et utilise une API Python pour 
 
 ### Installation du projet
 1. Cloner le dépôt : 
-  ```bash
-  git clone https://url-du-depot.git
+    ```bash
+    git clone https://github.com/Flod224/MOTSign-Project.git
 
 2. Naviguer dans le répertoire :
   ```bash
@@ -59,12 +59,12 @@ Assurez-vous d'avoir installé Anaconda ou Miniconda, qui sont des distributions
 1. Ouvrez Visual Studio Code.
 2. Ouvrez le terminal intégré dans Visual Studio Code en allant dans le menu **View** > **Terminal**.
 3. Naviguez dans le répertoire contenant le fichier `motsignenvi.yaml` :
-  ```bash
-  cd api/environnement
+    ```bash
+      cd api/environnement
 4. Créez l'environnement Python à partir du fichier `motsignenvi.yaml` :
-  ```bash
-  conda env create -f motsignenvi.yaml
-  conda activate nom_de_votre_environnement
+    ```bash
+    conda env create -f motsignenvi.yaml
+    
 
 ## Configuration de Visual Studio Code pour Utiliser l'Environnement
 
@@ -74,8 +74,8 @@ Assurez-vous d'avoir installé Anaconda ou Miniconda, qui sont des distributions
 
 ## Compilation et Déploiement
 ### Compiler le Projet
-  ```bash
-  npx expo start
+    ```bash
+    npx expo start
 
 ## Déployer sur un Appareil Réel
 
