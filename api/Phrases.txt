@@ -1,0 +1,22 @@
+============================================================================PHRASES=========================================================================================================
+
+
+WIMI : Bonjour, je suis Wimi, et toi ?
+
+JOSPINO : Salut, je m'appelle Jospino. Comment tu vas ?
+
+WIMI : ça va merci. Qu'est ce que tu fais ici ?
+
+JOSPINO : Je me promène et je profite de la journée ensoleillée. Et toi ?
+
+WIMI : c'est sympa de se promener par une journée ensoleillée ! Je suis ici pour rencontrer un ami dans le parc.
+
+JOSPINO : C'est génial ! Les rencontres spontanées sont toujours agréables. Comment s'appelle ton ami ?
+
+WIMI : Son nom est Alex. je le connais depuis dix-huit ans.
+
+JOSPINO : super ! bonne journée.
+
+WIMI : Merci.
+
+ 
