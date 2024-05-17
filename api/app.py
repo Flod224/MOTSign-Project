@@ -3,10 +3,8 @@
 
 import uuid
 from flask import Flask, request, jsonify
-import requests
 import cv2
 import numpy as np
-from matplotlib import pyplot as plt
 import os 
 import time 
 import mediapipe as mp
@@ -19,7 +17,6 @@ import spacy
 import mediapipe as mp
 from flask import Flask, request, jsonify
 import numpy as np
-from matplotlib import pyplot as plt
 import nltk
 from nltk.corpus import stopwords
 from collections import deque
@@ -174,9 +171,6 @@ def translate_text():
         
             #print(expressions)
         
-               #
-            #framelist = []
-            
             
             for expression in expressions:
                 verbes_infinitif = []
