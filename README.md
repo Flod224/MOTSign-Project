@@ -30,6 +30,10 @@ L'application est développée avec React Native et utilise une API Python pour 
   - Node.js
   - React Native
   - Python pour l'API backend
+  - OpenCV 4.9.0.80
+  - Flask 3.0.3
+  - Ngrok
+  - Mediapipe 0.8.11
 
 ## Prérequis
 - **Système d'exploitation** : Windows 11
@@ -75,6 +79,16 @@ Assurez-vous d'avoir installé Anaconda ou Miniconda, qui sont des distributions
 
 3. Choisissez l'interpréteur Python de votre environnement nouvellement créé. Il sera listé comme quelque chose comme `(nom_de_votre_environnement) ...`.
 
+4. Installer Flask
+    ```bash
+          pip install flask
+5.  Installer OpenCV
+    ```bash
+            pip install opencv-python
+6. Installer Mediapipe
+    ```bash
+            pip install mediapipe 
+   
 ## Compilation et Déploiement
 ### Compiler le Projet
     
