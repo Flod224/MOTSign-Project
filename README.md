@@ -78,7 +78,7 @@ Assurez-vous d'avoir installé Anaconda ou Miniconda, qui sont des distributions
 2. Tapez et sélectionnez `Python: Select Interpreter`.
 
 3. Choisissez l'interpréteur Python de votre environnement nouvellement créé. Il sera listé comme quelque chose comme `(nom_de_votre_environnement) ...`.
-
+! Si vous avez des problèmes de dépendances même après l'importation de l'environnement, veuillez suivre les étapes suivantes jusqu'au point 6.
 4. Installer Flask
     ```bash
     pip install flask
