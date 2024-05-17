@@ -1,5 +1,6 @@
 # MOTSign
 ![MOTSign Logo](assets\LOGO2.png)
+
 ## Description
 MOTSign est un projet de fin d'études de troisième année de bachelier à la Faculté Polytechnique de Mons. Il vise à améliorer la communication des personnes malentendantes ou sourdes en fournissant une application mobile capable de traduire les langues des signes en texte et vice versa.
 
@@ -29,6 +30,10 @@ L'application est développée avec React Native et utilise une API Python pour 
   - Node.js
   - React Native
   - Python pour l'API backend
+  - OpenCV 4.9.0.80
+  - Flask 3.0.3
+  - Ngrok
+  - Mediapipe 0.8.11
 
 ## Prérequis
 - **Système d'exploitation** : Windows 11
@@ -48,7 +53,7 @@ L'application est développée avec React Native et utilise une API Python pour 
     git clone https://github.com/Flod224/MOTSign-Project.git
 
 2. Naviguer dans le répertoire :
-  ```bash
+    ```bash
     cd MOTSign
 
 ## Configuration de l'Environnement Python avec Visual Studio Code
@@ -60,24 +65,35 @@ Assurez-vous d'avoir installé Anaconda ou Miniconda, qui sont des distributions
 2. Ouvrez le terminal intégré dans Visual Studio Code en allant dans le menu **View** > **Terminal**.
 3. Naviguez dans le répertoire contenant le fichier `motsignenvi.yaml` :
     ```bash
-      cd api/environnement
+    cd api/environnement
+
 4. Créez l'environnement Python à partir du fichier `motsignenvi.yaml` :
     ```bash
-      conda env create -f motsignenvi.yaml
-    
+    conda env create -f motsignenvi.yaml
 
 ## Configuration de Visual Studio Code pour Utiliser l'Environnement
 
 1. Une fois l'environnement activé, ouvrez la palette de commandes en appuyant sur `Ctrl+Shift+P` (ou `Cmd+Shift+P` sur macOS).
-2. Tapez et sélectionnez `Python: Select Interpreter`.
-3. Choisissez l'interpréteur Python de votre environnement nouvellement créé. Il sera listé comme quelque chose comme `(nom_de_votre_environnement) ...`.
 
+2. Tapez et sélectionnez `Python: Select Interpreter`.
+
+3. Choisissez l'interpréteur Python de votre environnement nouvellement créé. Il sera listé comme quelque chose comme `(nom_de_votre_environnement) ...`.
+! Si vous avez des problèmes de dépendances même après l'importation de l'environnement, veuillez suivre les étapes suivantes jusqu'au point 6.
+4. Installer Flask
+    ```bash
+    pip install flask
+5.  Installer OpenCV
+    ```bash
+    pip install opencv-python
+6. Installer Mediapipe
+    ```bash
+    pip install mediapipe 
+   
 ## Compilation et Déploiement
 ### Compiler le Projet
-      
-  npx expo start
-      
-                   
+    
+    npx expo start
+
 ## Déployer sur un Appareil Réel
 
 1. Télécharger puis installer l'application EXPO-GO sur iOS ou Android.
