@@ -3,11 +3,13 @@ import { View, TextInput, Button, Keyboard, KeyboardAvoidingView, Platform, Touc
 import { Video } from 'expo-av';
 import OpenAI from "openai";
 
+
 const videopahtdefaults = 'https://storage.googleapis.com/motsign/assets/avatar.mp4';
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: "paste_your_openai_key", //Pour la securité nous ne pouvont pas laisser la clé sur le GitHub c'est pourquoi il faut nous la demander en priver s'il faut
 });
+
 
 const Text_to_Signs = () => {
   const [text, setText] = useState('');
@@ -37,7 +39,6 @@ const Text_to_Signs = () => {
         top_p: 1,
       });
       console.log(response.choices[0].message.content.trim());
-      //console.log(response.data.choices[0].text.trim())
       return response.choices[0].message.content.trim();
     } catch (error) {
       console.error('Error correcting syntax:', error);
@@ -49,7 +50,7 @@ const Text_to_Signs = () => {
     setLoading(true);
     try {
       const correctedText = await correctSyntax(text);
-      const response = await fetch('https://4c2e-83-134-111-160.ngrok-free.app//translate-text', {
+      const response = await fetch('https://e8f8-83-134-111-160.ngrok-free.app//translate-text', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
