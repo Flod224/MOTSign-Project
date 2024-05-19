@@ -3,9 +3,13 @@ import { View, TextInput, Button, Keyboard, KeyboardAvoidingView, Platform, Touc
 import { Video } from 'expo-av';
 import OpenAI from "openai";
 
-const openai = new OpenAI();
-
 const videopahtdefaults = 'https://storage.googleapis.com/motsign/assets/avatar.mp4';
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+
 
 const Text_to_Signs = () => {
   const [text, setText] = useState('');
@@ -15,7 +19,7 @@ const Text_to_Signs = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [defaultvideoloop, setdefaultvideoloop] = useState(true);
 
-
+  
   
   //const openaiClient = new openai.OpenAI({ apiKey: openaiApiKey });
 
@@ -25,14 +29,24 @@ const Text_to_Signs = () => {
       prompt: 'Write a tagline for an ice cream shop.'
   });
 
-  
-
     try {
-      const response = await openai.chat.create({
-        messages: [{ role: "system", content: "Correct this following text if any syntaxique error or leave it exactly same:"+inputText }],
+      const response = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
-        stop:"/n",
+        messages: [
+          {
+            "role": "system",
+            "content": "Correct syntax in french language for the content if error is encountered"
+          },
+          {
+            "role": "user",
+            "content": inputText
+          }
+        ],
+        temperature: 0.7,
+        max_tokens: 64,
+        top_p: 1,
       });
+
       console.log(response.data.choices[0].text.trim())
       return response.data.choices[0].text.trim();
     } catch (error) {
