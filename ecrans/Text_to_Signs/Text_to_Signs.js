@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { View, TextInput, Button, Keyboard, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, StyleSheet, Text, ActivityIndicator } from 'react-native';
 import { Video } from 'expo-av';
-//import OpenAI from "openai";
+import OpenAI from "openai";
 
-//const openai = new OpenAI();
+const openai = new OpenAI();
 
 const videopahtdefaults = 'https://storage.googleapis.com/motsign/assets/avatar.mp4';
 
@@ -20,6 +20,13 @@ const Text_to_Signs = () => {
   //const openaiClient = new openai.OpenAI({ apiKey: openaiApiKey });
 
   const correctSyntax = async (inputText) => {
+    const completion = await openai.completions.create({
+      model: 'gpt-3.5-turbo-instruct',
+      prompt: 'Write a tagline for an ice cream shop.'
+  });
+
+  
+
     try {
       const response = await openai.chat.create({
         messages: [{ role: "system", content: "Correct this following text if any syntaxique error or leave it exactly same:"+inputText }],
@@ -38,7 +45,7 @@ const Text_to_Signs = () => {
     setLoading(true);
     try {
       const correctedText = await correctSyntax(text);
-      const response = await fetch('https://b7e9-188-188-52-77.ngrok-free.app//translate-text', {
+      const response = await fetch('https://4c2e-83-134-111-160.ngrok-free.app//translate-text', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
