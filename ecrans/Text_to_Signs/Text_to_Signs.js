@@ -6,7 +6,8 @@ import OpenAI from "openai";
 const videopahtdefaults = 'https://storage.googleapis.com/motsign/assets/avatar.mp4';
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  //apiKey: process.env.OPENAI_API_KEY,
+  apiKey: "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",
 });
 
 const Text_to_Signs = () => {
@@ -36,9 +37,9 @@ const Text_to_Signs = () => {
         max_tokens: 64,
         top_p: 1,
       });
-
-      console.log(response.data.choices[0].text.trim())
-      return response.data.choices[0].text.trim();
+      console.log(response.choices[0].message.content.trim());
+      //console.log(response.data.choices[0].text.trim())
+      return response.choices[0].message.content.trim();
     } catch (error) {
       console.error('Error correcting syntax:', error);
       return inputText; // Return original text if there's an error
