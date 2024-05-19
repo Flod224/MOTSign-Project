@@ -6,8 +6,7 @@ import OpenAI from "openai";
 const videopahtdefaults = 'https://storage.googleapis.com/motsign/assets/avatar.mp4';
 
 const openai = new OpenAI({
-  //apiKey: process.env.OPENAI_API_KEY,
-  apiKey: "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",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 const Text_to_Signs = () => {
@@ -26,7 +25,7 @@ const Text_to_Signs = () => {
         messages: [
           {
             "role": "system",
-            "content": "Correct syntax in french language for the content if error is encountered"
+            "content": "Correct syntax in french language for the content if error is encountered in it and return only the corrected text no more text added"
           },
           {
             "role": "user",
