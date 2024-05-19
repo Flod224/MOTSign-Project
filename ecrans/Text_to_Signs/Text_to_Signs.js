@@ -24,11 +24,7 @@ const Text_to_Signs = () => {
   //const openaiClient = new openai.OpenAI({ apiKey: openaiApiKey });
 
   const correctSyntax = async (inputText) => {
-    const completion = await openai.completions.create({
-      model: 'gpt-3.5-turbo-instruct',
-      prompt: 'Write a tagline for an ice cream shop.'
-  });
-
+    
     try {
       const response = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
