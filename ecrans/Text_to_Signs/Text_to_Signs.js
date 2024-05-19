@@ -9,8 +9,6 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-
-
 const Text_to_Signs = () => {
   const [text, setText] = useState('');
   const [translatedText, setTranslatedText] = useState('');
@@ -18,10 +16,6 @@ const Text_to_Signs = () => {
   const [videoPaths, setVideoPaths] = useState([videopahtdefaults]); // Default video path
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [defaultvideoloop, setdefaultvideoloop] = useState(true);
-
-  
-  
-  //const openaiClient = new openai.OpenAI({ apiKey: openaiApiKey });
 
   const correctSyntax = async (inputText) => {
     
@@ -204,7 +198,7 @@ const styles = StyleSheet.create({
   video: {
     width: '100%', // La vidéo occupera 100% de la largeur disponible
     height: '100%', // La vidéo occupera 100% de la hauteur disponible
-    aspectRatio: 16/9, // Optionnel: on peut définir un rapport d'aspect pour garder les proportions
+    aspectRatio: 16/9, //  pour garder les proportions
   },
   inputContainer: {
     width: '100%',
