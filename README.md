@@ -1,5 +1,5 @@
 # MOTSign
-![MOTSign Logo](https://storage.googleapis.com/motsign/assets/LOGO.png)
+![MOTSign Logo](https://storage.googleapis.com/motsign/assets/LOGO.jpg)
 
 ## Description
 MOTSign est un projet de fin d'études de troisième année de bachelier à la Faculté Polytechnique de Mons. Il vise à améliorer la communication des personnes malentendantes ou sourdes en fournissant une application mobile capable de traduire les langues des signes en texte et vice versa.
