@@ -1,5 +1,5 @@
 # MOTSign
-![MOTSign Logo](assets\LOGO2.png)
+![MOTSign Logo](https://storage.googleapis.com/motsign/assets/LOGO.jpg)
 
 ## Description
 MOTSign est un projet de fin d'études de troisième année de bachelier à la Faculté Polytechnique de Mons. Il vise à améliorer la communication des personnes malentendantes ou sourdes en fournissant une application mobile capable de traduire les langues des signes en texte et vice versa.
@@ -20,7 +20,7 @@ MOTSign est un projet de fin d'études de troisième année de bachelier à la F
 L'application est développée avec React Native et utilise une API Python pour la partie backend.
 
 ### Design de fonctionnalités
-![Design de fonctionnalités](assets\architecture.png)
+![Design de fonctionnalités](https://storage.googleapis.com/motsign/assets/architecture.png)
 
 ## Technologies Utilisées
 - **Langage de programmation** : JavaScript (React Native), Python
@@ -34,6 +34,10 @@ L'application est développée avec React Native et utilise une API Python pour 
   - Flask 3.0.3
   - Ngrok
   - Mediapipe 0.8.11
+  - Nltk 3.8.1
+  - Spacy 3.7.4
+
+A noter que les versions précisées ci-dessus servent juste à faciliter l'installation au cas où l'utilisateur serait confronté à des soucis de compatibilité.
 
 ## Prérequis
 - **Système d'exploitation** : Windows 11
@@ -78,21 +82,40 @@ Assurez-vous d'avoir installé Anaconda ou Miniconda, qui sont des distributions
 2. Tapez et sélectionnez `Python: Select Interpreter`.
 
 3. Choisissez l'interpréteur Python de votre environnement nouvellement créé. Il sera listé comme quelque chose comme `(nom_de_votre_environnement) ...`.
+   
 ! Si vous avez des problèmes de dépendances même après l'importation de l'environnement, veuillez suivre les étapes suivantes jusqu'au point 6.
-4. Installer Flask
+
+5. Installer Flask
     ```bash
     pip install flask
-5.  Installer OpenCV
+6.  Installer OpenCV
     ```bash
     pip install opencv-python
-6. Installer Mediapipe
+7. Installer Mediapipe
     ```bash
     pip install mediapipe 
-   
+8. Installer Spacy
+    ```bash
+    pip install Spacy
+9. Installer Nltk
+   ```bash
+    pip install nltk
+
 ## Compilation et Déploiement
 ### Compiler le Projet
-    
+1. Building expo app
+   ```bash 
     npx expo start
+2. Exécution du serveur flask (backend)
+   ```bash
+   cd api
+   python app.py
+##### Après l'exécution du serveur vous aurez une sortie pareille à celle-ci:
+![Serveur flask](https://storage.googleapis.com/motsign/assets/flask.png)
+
+4. Exécution du tunnel réseau sécurisé Ngrok
+    ```bash 
+    ngrok http 5000
 
 ## Déployer sur un Appareil Réel
 
@@ -116,13 +139,13 @@ En cliquant sur "Traduire", les gestes sont traduits en texte qui apparaît dans
 L'utilisateur peut arrêter la capture en cliquant sur "Stop".
 
 ## Contributeurs
-Barry Mamadou Mounir : Développeur FrontEnd
+Barry Mamadou Mounir : Développeur FrontEnd 
+
 Bouazzati Ouiam : Développeur Backend (texte en geste)
+
 Jospin Teubou Melonou : Développeur Backend (geste en texte)
 
-## Licence
-Ce projet est sous licence ...?
-
+Vous pouvez nous contacter sur LinkedIn si besoin, nous sommes des étudiants de la Faculté Polytechnique de Mons
 
 ## Annexes
 ## Références et Ressources
