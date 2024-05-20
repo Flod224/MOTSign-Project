@@ -20,7 +20,7 @@ MOTSign est un projet de fin d'études de troisième année de bachelier à la F
 L'application est développée avec React Native et utilise une API Python pour la partie backend.
 
 ### Design de fonctionnalités
-![Design de fonctionnalités]([assets\architecture.png](https://storage.googleapis.com/motsign/assets/architecture.png))
+![Design de fonctionnalités](https://storage.googleapis.com/motsign/assets/architecture.png)
 
 ## Technologies Utilisées
 - **Langage de programmation** : JavaScript (React Native), Python
