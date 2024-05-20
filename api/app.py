@@ -32,10 +32,9 @@ app = Flask(__name__)
 #TEXTES - GESTES:
 # Charger le modèle de langue en français
 nlp = spacy.load("fr_core_news_sm")
-#repertoires_videos = ["education-nationale", "elix", "jauvert"]
-#repertoires_videos = ["assets\dataset"]
+
 question = {"comment","quoi","où","quel","quelle","pourquoi","combien","qu'est ce que","quand","qui","qu'est ce que tu fais"}
-sentence = {"que fait t on","que faire","qu'est ce que je fais","qu'est ce que tu fais"}
+sentence = {"que fait on","que faire","qu'est ce que je fais","qu'est ce que tu fais"}
 motscompo ={"ça va","dix huit"}
 
 mots_composes = {}

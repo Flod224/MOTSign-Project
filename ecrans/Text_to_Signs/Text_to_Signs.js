@@ -50,7 +50,7 @@ const Text_to_Signs = () => {
     setLoading(true);
     try {
       const correctedText = await correctSyntax(text);
-      const response = await fetch('https://e8f8-83-134-111-160.ngrok-free.app//translate-text', {
+      const response = await fetch('https://aa6a-83-134-111-160.ngrok-free.app//translate-text', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
