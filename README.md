@@ -103,8 +103,19 @@ Assurez-vous d'avoir installé Anaconda ou Miniconda, qui sont des distributions
 
 ## Compilation et Déploiement
 ### Compiler le Projet
-    
+1. Building expo app
+   ```bash 
     npx expo start
+2. Exécution du serveur flask (backend)
+   ```bash
+   cd api
+   python app.py
+##### Après l'exécution du serveur vous aurez une sortie pareille à celle-ci:
+![Serveur flask](https://storage.googleapis.com/motsign/assets/flask.png)
+
+4. Exécution du tunnel réseau sécurisé Ngrok
+    ```bash 
+    ngrok http 5000
 
 ## Déployer sur un Appareil Réel
 
